@@ -1,19 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>id.go.bps</groupId>
-  <artifactId>bps-parent</artifactId>
-  <version>1.0.0</version>
-  <name>BPS Parent</name>
-  <description>BPS Parent</description>
-  <packaging>pom</packaging>
+  <artifactId>bps-api</artifactId>
+  <name>BPS API</name>
+  <description>API For BPS Project</description>
+  <parent>
+    <groupId>id.go.bps</groupId>
+    <artifactId>bps-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
   <organization>
   	<name>BPS - Statistics Indonesia</name>
   	<url>http://www.bps.go.id</url>
   </organization>
   
-  <properties>
-  	<github.global.server>github</github.global.server>
-  </properties>
+  <repositories>
+  	<repository>
+  		<id>bps-ri-mvn-repo</id>
+  		<name>Maven Repositories BPS-RI</name>
+  		<url>https://github.com/bps-ri/mvn-repo/raw/mvn-repo/</url>
+  	</repository>
+  </repositories>
   
   <distributionManagement>
   	<repository>
@@ -22,6 +28,10 @@
         <url>file://${project.build.directory}/mvn-repo</url>
   	</repository>
   </distributionManagement>
+  
+  <properties>
+  	<github.global.server>github</github.global.server>
+  </properties>
   
   <build>
   	<plugins>
@@ -58,9 +68,4 @@
         </plugin>
   	</plugins>
   </build>
-  <modules>
-  	<module>../bps-api</module>
-  	<module>../bps-rest-api</module>
-  	<module>../bps-rest-server</module>
-  </modules>
 </project>
