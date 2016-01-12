@@ -52,6 +52,7 @@
 				<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 	<!-- matches distribution management repository url above -->
 				<branch>refs/heads/mvn-repo</branch>                       				<!-- remote branch name -->
 				<includes><include>**/*</include></includes>
+				<merge>true</merge>
 				<server>${github.global.server}</server>
 				<repositoryName>mvn-repo</repositoryName>      							<!-- github repo name -->
 				<repositoryOwner>bps-ri</repositoryOwner>    							<!-- github username  -->
