@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>bps-api</artifactId>
-  <name>BPS API</name>
-  <description>API For BPS Project</description>
+  <artifactId>bps-rest-api</artifactId>
+  <name>BPS REST API</name>
+  <description>REST API For BPS Project</description>
   <parent>
     <groupId>id.go.bps</groupId>
     <artifactId>bps-parent</artifactId>
@@ -68,4 +68,11 @@
         </plugin>
   	</plugins>
   </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>id.go.bps</groupId>
+  		<artifactId>bps-api</artifactId>
+  		<version>1.0.0</version>
+  	</dependency>
+  </dependencies>
 </project>
