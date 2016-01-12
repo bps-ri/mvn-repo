@@ -1,14 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>id.go.bps</groupId>
-    <artifactId>bps-parent</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../bps-parent</relativePath>
-  </parent>
-  <artifactId>bps-api</artifactId>
-  <name>BPS API</name>
-  <description>API For BPS Project</description>
+  <groupId>id.go.bps</groupId>
+  <artifactId>bps-parent</artifactId>
+  <version>1.0.0</version>
+  <name>BPS Parent</name>
+  <description>BPS Parent</description>
+  <packaging>pom</packaging>
+  <organization>
+  	<name>BPS - Statistics Indonesia</name>
+  	<url>http://www.bps.go.id</url>
+  </organization>
   
   <properties>
   	<github.global.server>github</github.global.server>
@@ -57,4 +58,9 @@
         </plugin>
   	</plugins>
   </build>
+  <modules>
+  	<module>../bps-api</module>
+  	<module>../bps-rest-api</module>
+  	<module>../bps-rest-server</module>
+  </modules>
 </project>
